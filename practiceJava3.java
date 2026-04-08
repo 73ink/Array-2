@@ -54,10 +54,12 @@ public class practiceJava3 {
 //        for (int i = 0; i < result12.length; i++) {
 //            System.out.println(result12[i]);
 //        }
-        // task-13
-        int[] nums13 = {10, 3, 5, 6};
-        System.out.println(p.bigDiff(nums13));
-
+//        // task-13
+//        int[] nums13 = {10, 3, 5, 6};
+//        System.out.println(p.bigDiff(nums13));
+        // task-14
+        int[] nums14 = {1, 2, 2};
+        System.out.println(p.sum67(nums14));
     }
 
     public int countEvens(int[] nums) {
@@ -243,6 +245,23 @@ public class practiceJava3 {
             }
         }
         return sum;
+    }
+    public boolean sum28(int[] nums) {
+
+        int sum = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+
+            if (nums[i] == 2) {
+                sum = sum + nums[i];
+            }
+        }
+        if (sum == 8) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 
