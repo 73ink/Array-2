@@ -50,10 +50,13 @@ public class practiceJava3 {
 //            System.out.println(result11[i]);
 //        }
         // task-12
-        String[] result12 = p.fizzBuzz(1, 6);
-        for (int i = 0; i < result12.length; i++) {
-            System.out.println(result12[i]);
-        }
+//        String[] result12 = p.fizzBuzz(1, 6);
+//        for (int i = 0; i < result12.length; i++) {
+//            System.out.println(result12[i]);
+//        }
+        // task-13
+        int[] nums13 = {10, 3, 5, 6};
+        System.out.println(p.bigDiff(nums13));
 
     }
 
@@ -202,6 +205,23 @@ public class practiceJava3 {
         }
 
         return result;
+    }
+    public int bigDiff(int[] nums) {
+
+        int max = nums[0];
+        int min = nums[0];
+
+        for (int i = 0; i < nums.length; i++) {
+
+            if (nums[i] > max) {
+                max = nums[i];
+            }
+
+            if (nums[i] < min) {
+                min = nums[i];
+            }
+        }
+        return max - min;
     }
 
 
