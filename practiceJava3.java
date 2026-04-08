@@ -29,13 +29,17 @@ public class practiceJava3 {
 //        int[] nums7 = {2, 1, 3, 5};
 //        System.out.println(p.modThree(nums7));
         // task-8
-        int[] nums8 = {5, 6, 45, 99, 13, 5, 6};
-        System.out.println(p.sameEnds(nums8, 2));
-
+//        int[] nums8 = {5, 6, 45, 99, 13, 5, 6};
+//        System.out.println(p.sameEnds(nums8, 2));
+        // task-9
+        int[] nums9 = {6, 2, 5, 3};
+        int[] result9 = p.shiftLeft(nums9);
+        for (int i = 0; i < result9.length; i++) {
+            System.out.println(result9[i]);
+        }
     }
 
     public int countEvens(int[] nums) {
-
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] % 2 == 0) {
@@ -120,5 +124,14 @@ public class practiceJava3 {
         }
         return true;
     }
+    public int[] shiftLeft(int[] nums) {
+        int first = nums[0];
+        for (int i = 0; i < nums.length - 1; i++) {
+            nums[i] = nums[i + 1];
+        }
+        nums[nums.length - 1] = first;
+        return nums;
+    }
+
 
 }
