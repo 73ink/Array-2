@@ -14,10 +14,14 @@ public class practiceJava3 {
 //        int[] nums3 = {0, 2, 4};
 //        System.out.println(p.lucky13(nums3));
         // task-4
-        int[] result4 = p.fizzArray(5);
-        for (int i = 0; i < result4.length; i++) {
-            System.out.println(result4[i]);
-        }
+//        int[] result4 = p.fizzArray(5);
+//        for (int i = 0; i < result4.length; i++) {
+//            System.out.println(result4[i]);
+//        }
+        // task-5
+        int[] nums5 = {1, 2, 3};
+        System.out.println(p.no14(nums5));
+
     }
 
     public int countEvens(int[] nums) {
@@ -56,6 +60,25 @@ public class practiceJava3 {
             result[i] = i;
         }
         return result;
+    }
+    public boolean no14(int[] nums) {
+        boolean has1 = false;
+        boolean has4 = false;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
+                has1 = true;
+            }
+            if (nums[i] == 4) {
+                has4 = true;
+            }
+        }
+
+        if (has1 == true && has4 == true) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
 }
