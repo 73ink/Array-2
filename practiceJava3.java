@@ -26,8 +26,11 @@ public class practiceJava3 {
 //        int[] nums6b = {2, 3, 10};
 //        System.out.println(p.matchUp(nums6a, nums6b));
         // task-7
-        int[] nums7 = {2, 1, 3, 5};
-        System.out.println(p.modThree(nums7));
+//        int[] nums7 = {2, 1, 3, 5};
+//        System.out.println(p.modThree(nums7));
+        // task-8
+        int[] nums8 = {5, 6, 45, 99, 13, 5, 6};
+        System.out.println(p.sameEnds(nums8, 2));
 
     }
 
@@ -108,6 +111,14 @@ public class practiceJava3 {
             }
         }
         return false;
+    }
+    public boolean sameEnds(int[] nums, int n) {
+        for (int i = 0; i < n; i++) {
+            if (nums[i] != nums[nums.length - n + i]) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }
